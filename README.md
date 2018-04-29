@@ -81,4 +81,5 @@ Using knn as a classifier on the extracted features (CNN codes). Uses features_v
 
 <b> Learn what knn is and how it is implemented in detail :</b> https://github.com/PollenJain/PESU_I_O/tree/master/Machine_Learning_Hands_On_Using_Python/Week4
 
-
+Cmd to run knn_as_classifier.py<br>
+<b>python knn_as_classifier.py --featureVectors features_vectors_with_corresponding_labels.csv --neighbors 3</b>
