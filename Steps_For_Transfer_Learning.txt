@@ -1,0 +1,44 @@
+Sequence to follow for transfer learning :
+
+1. Train the model for 1 epoch and save it.
+2. After Training, load the model.
+	2.1 Pass the training data images to the trained model.
+	2.2 Save the feature vector from the last layer for each of the training image along with their labels.
+		1 feature per image. It is a 1024 dimensional feature vector.
+		1 label per image.
+		It should look like this : [ , , , , , ...., ] of dimension 1x1024 and label 1
+	2.3 Call this trainXForClassifier, trainYForClassifier
+	
+	2.4 Repeat 2.1 to 2.2 with test images along with their labels.
+	2.4 Call this testXForClassifier, testYForClassifier
+	
+					or
+					
+2. After Training, load the model. 
+	2.1 Pass the entire dataset through the trained model. 
+	2.2 Save the feature vector from the last layer for each of the training image along with their labels.
+		1 feature per image. It is a 1024 dimensional feature vector.
+		1 label per image.
+		It should look like this : [ , , , , , ...., ] of dimension 1x1024 and label 1
+
+3 Now you can split it to training and testing dataset depending on your needs (maybe 70 percent training and 30 percent testing)
+	
+
+
+Checklist :
+Step no 1: Train the model for 1 epoch and save it.
+Status: Doing. Save as one_epoch.model and label_binarizer.pickle.
+Cmd used : python train.py --dataset C:\Users\paragjai\Desktop\DesktopBackup\College\aml\aml_project\smallerVGGNet\datasets --model one_epoch.model --labelbin label_binarizer.pickle
+Status: Done. Saved as one_epoch.model and label_binarizer.pickle.
+
+Step no 2: Pass the entire dataset through the trained model, extract the feature vectors and save it.
+Status: Doing. Save as features_vectors_with_corresponding_labels.csv 
+Cmd used : python extract_feature_vectors.py --dataset C:\Users\paragjai\Desktop\DesktopBackup\College\aml\aml_project\smallerVGGNet\datasets --model one_epoch.model
+Status: Done. Save as features_vectors_with_corresponding_labels.csv
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+Download the dataset from this link:
+https://github.com/PollenJain/PESU_I_O/tree/master/Machine_Learning_Hands_On_Using_Python/Week4/Resources/KNN_Implementation/datasets/animals
