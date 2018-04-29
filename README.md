@@ -74,3 +74,11 @@ Class implemented to load the dataset to disk and apply the preprocessor to each
 
 Cmd to run extract_feature_vectors.py <br>
 <b>python extract_feature_vectors.py --dataset datasets --model one_epoch.model</b>
+
+<h2> Using extracted feature vectors and classifying using K-Nearest Neighbor : knn_as_classifier.py</h2>
+
+Using knn as a classifier on the extracted features (CNN codes). Uses features_vectors_with_corresponding_labels.csv.
+
+<b> Learn what knn is and how it is implemented in detail :</b> https://github.com/PollenJain/PESU_I_O/tree/master/Machine_Learning_Hands_On_Using_Python/Week4
+
+

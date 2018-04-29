@@ -2,10 +2,10 @@
 import pandas as pd
 import numpy as np
 fv1 = np.array([10,20,30,40]) # (4,)
-label1 = 1
+label1 = "cats"
 
 fv2 = np.array([50,60,70,80]) # (4,)
-label2 = 2
+label2 = "dogs"
 
 fv1_with_label = np.append(fv1, label1) # (5,) # Last field of each feature vector now is the class/label the feature vector belongs to
 fv2_with_label = np.append(fv2, label2) # (5,)
