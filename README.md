@@ -51,7 +51,7 @@ Cmd to run cnn_as_a_classifier.py <br>
 <h2> Extracting features for Transfer Learning : extract_feature_vectors.py </h2>
 
 Loads the model and generates a csv file containing 1024 dimensional feature vector along with labels. Generates features_vectors_with_corresponding_labels.csv. Uses one_epoch.model and label_binarizer.pickle.
-Read Steps_For_Transfer_Learning.txt for more details.
+Read <b>Steps_For_Transfer_Learning.txt</b> for more details.
 
 <ul> 
 <li><b>simpleresizepreprocessor.py :</b> 
