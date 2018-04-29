@@ -1,6 +1,6 @@
 <h2> Training Phase : train.py</h2>
 
-<ul> Files for Preprocessing</ul>
+<ul> Files for Preprocessing
 <li><b>simpleresizepreprocessor.py</b>
 Class implemented to resize the input image
 </li>
@@ -22,7 +22,7 @@ python train.py --dataset datasets --model one_epoch.model --labelbin label_bina
 
 <h2> Testing/Classification Phase : cnn_as_a_classifier.py </h2>
 
-<ul> Files for Preprocessing</ul>
+<ul> Files for Preprocessing
 <li><b>simpleresizepreprocessor.py</b>
 Class implemented to resize the input image
 </li>
