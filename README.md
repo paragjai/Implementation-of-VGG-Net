@@ -1,28 +1,31 @@
 <h2> Training Phase : train.py</h2>
 
+Saves the model and labels to the disk.
+
 <h3> Files required for preprocessing while training </h3>
 
 <ul> 
-<li><b>simpleresizepreprocessor.py</b>
+<li><b>simpleresizepreprocessor.py</b>:
 Class implemented to resize the input image
 </li>
-<li><b>normalizepreprocessor.py</b>
+<li><b>normalizepreprocessor.py</b>:
 Class implemented to normalize an 8 bit RGB image
 </li>
 </ul>
 
-<b>simpledatasetloader.py</b>
+<b>simpledatasetloader.py</b>:
 Class implemented to load the dataset to disk and apply the preprocessor to each of the image.
 
-<b>smallerVGGNet.py</b>
+<b>smallerVGGNet.py</b>:
 VGGNet model is implemented in this file using keras.
 
-Saves the model and labels to the disk.
 
-Cmd to run train.py:
-python train.py --dataset datasets --model one_epoch.model --labelbin label_binarizer.pickle
+Cmd to run train.py:<br>
+<b>python train.py --dataset datasets --model one_epoch.model --labelbin label_binarizer.pickle</b>
 
 <h2> Testing/Classification Phase : cnn_as_a_classifier.py </h2>
+
+Loads the model and classifies the image as either cats or dogs or panda ( 3 classes we trained the model for ).
 
 <h3> Files required for preprocessing while testing </h3>
 
@@ -42,9 +45,7 @@ It is so because keras expects input to be of 4 dimensions. We don't do this whe
 <b>simpledatasetloader.py</b>
 Class implemented to load the dataset to disk and apply the preprocessor to each of the image.
 
-Loads the model and classifies the image as either cats or dogs or panda ( 3 classes we trained the model for ).
-
-Cmd to run cnn_as_a_classifier.py:
-python cnn_as_classifier.py --imagePath cats_00001.jpg --model one_epoch.model --labelbin label_binarizer.pickle
+Cmd to run cnn_as_a_classifier.py:<br>
+<b>python cnn_as_classifier.py --imagePath cats_00001.jpg --model one_epoch.model --labelbin label_binarizer.pickle</b>
 
 
