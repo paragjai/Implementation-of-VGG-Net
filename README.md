@@ -73,4 +73,4 @@ Class implemented to extract 1024 dimensional vector (CNN code) from the image. 
 Class implemented to load the dataset to disk and apply the preprocessor to each of the image.
 
 Cmd to run extract_feature_vectors.py <br>
-python extract_feature_vectors.py --dataset datasets --model one_epoch.model
+<b>python extract_feature_vectors.py --dataset datasets --model one_epoch.model</b>
