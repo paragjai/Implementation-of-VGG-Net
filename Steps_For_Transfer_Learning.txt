@@ -28,14 +28,18 @@ Sequence to follow for transfer learning :
 Checklist :
 Step no 1: Train the model for 1 epoch and save it.
 Status: Doing. Save as one_epoch.model and label_binarizer.pickle.
-Cmd used : python train.py --dataset C:\Users\paragjai\Desktop\DesktopBackup\College\aml\aml_project\smallerVGGNet\datasets --model one_epoch.model --labelbin label_binarizer.pickle
+Cmd used: python train.py --dataset datasets --model one_epoch.model --labelbin label_binarizer.pickle
 Status: Done. Saved as one_epoch.model and label_binarizer.pickle.
 
 Step no 2: Pass the entire dataset through the trained model, extract the feature vectors and save it.
 Status: Doing. Save as features_vectors_with_corresponding_labels.csv 
-Cmd used : python extract_feature_vectors.py --dataset C:\Users\paragjai\Desktop\DesktopBackup\College\aml\aml_project\smallerVGGNet\datasets --model one_epoch.model
+Cmd used: python extract_feature_vectors.py --dataset datasets --model one_epoch.model
 Status: Done. Save as features_vectors_with_corresponding_labels.csv
 
+Step no 3: Load the feature vectors from features_vectors_with_corresponding_labels.csv and use knn for classification.
+Status: Doing.
+Cmd used: python knn_as_classifier.py --featureVectors features_vectors_with_corresponding_labels.csv --neighbors 3
+Status: Done.
 
 
 _____________________________________________________________________________________________________________________________________
