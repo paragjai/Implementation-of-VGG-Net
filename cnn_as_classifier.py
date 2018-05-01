@@ -42,8 +42,10 @@ print("labels loaded.")
 
 print("[INFO] classifying image ... ")
 proba = model.predict(preprocessed_image)[0]
+print("probability vector: ", proba)
 idx = np.argmax(proba)
 predicted_label = lb.classes_[idx]
+print("probability of the predicted label : ", proba[idx])
 print("predicted label: ", predicted_label)
 print("image classified.")
 
