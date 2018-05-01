@@ -45,7 +45,7 @@ It is so because keras expects input to be of 4 dimensions. We don't do this whe
 <b>simpledatasetloader.py :</b>
 Class implemented to load the dataset to disk and apply the preprocessor to each of the image.
 
-Cmd to run cnn_as_a_classifier.py <br>
+Cmd to run cnn_as_classifier.py <br>
 <b>python cnn_as_classifier.py --imagePath cats_00001.jpg --model one_epoch.model --labelbin label_binarizer.pickle</b>
 
 <h2> Extracting features for Transfer Learning : extract_feature_vectors.py </h2>
