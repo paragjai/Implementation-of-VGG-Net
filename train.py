@@ -93,6 +93,12 @@ print("[INFO] training network ... ")
 aug = ImageDataGenerator(rotation_range=25, width_shift_range=0.1,
 	height_shift_range=0.1, shear_range=0.2, zoom_range=0.2,
 	horizontal_flip=True, fill_mode="nearest")
+	
+# fit_generator returns the history object. Metrics are stored in the history member of the object returned.
+# keras.callbacks.History()
+# Callback that records events into a History object.
+# This callback is automatically applied to every Keras model. The History object gets returned by the fit method of models.
+	
 H = model.fit_generator(aug.flow(trainX, trainY, batch_size=batch_size), validation_data = (testX, testY), steps_per_epoch = len(trainX),epochs = epochs, verbose = 1) # we are passing trainX, one_hot_encoded_trainY, testX, one_hot_encoded_testY
 
 print("[INFO] serializing/saving trained network ... ")
@@ -105,7 +111,7 @@ f.write(pickle.dumps(lb))
 f.close()
 print("Saved the one-hot encoded labels/labelBinarizer object " + args["model"])
 
-'''
+
 plt.style.use("ggplot")
 plt.figure()
 N = EPOCHS
@@ -118,5 +124,5 @@ plt.xlabel("Epoch #")
 plt.ylabel("Loss/Accuracy")
 plt.legend(loc = "upper left")
 plt.savefig(args["plot"])
-'''
+
 	
